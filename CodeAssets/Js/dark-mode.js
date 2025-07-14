@@ -10,7 +10,7 @@ function toggleH2AndPColor() {
       }
 
       main h1 {
-        color: ${isDarkMode ? '#2e2e2e' : '#cccccc'} !important;
+        color: ${isDarkMode ? '#2e2e2e' : '#blue'} !important;
         transition: color 0.5s;
       }
 
