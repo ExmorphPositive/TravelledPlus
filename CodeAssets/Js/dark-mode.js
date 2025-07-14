@@ -3,6 +3,11 @@ let isDarkMode = false;  // track state
 function toggleH2AndPColor() {
     const style = document.createElement('style');
     style.textContent = `
+      main h1 {
+        color: ${isDarkMode ? '#2e2e2e' : '#cccccc'} !important;
+        transition: color 0.5s;
+      }
+
       main h2 {
         color: ${isDarkMode ? '#2e2e2e' : '#cccccc'} !important;
         transition: color 0.5s;
