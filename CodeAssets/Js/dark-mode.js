@@ -9,7 +9,7 @@ function toggleH2AndPColor() {
       }
 
       main h2 {
-        color: ${isDarkMode ? '#2e2e2e' : '#cccccc'} !important;
+        color: ${isDarkMode ? '#2e2e2e' : '#ff2828ff'} !important;
         transition: color 0.5s;
       }
 
