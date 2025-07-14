@@ -1,3 +1,4 @@
+/*Whole default values*/
 main {
     min-height: 300px;
     background-color: white;
@@ -19,20 +20,13 @@ main p {
     transition: color 0.5s;
 }
 
-
+/*Shopify default values*/
 .blog-post-details {
     color: #2e2e2e;
     transition: color 0.5s;
 }
 
-th {
-    padding: 10px;
-    border: 1px solid #d2d2d2;
-    background-color: #f0f0f0;
-    text-align: left;
-    color: black;
-}
-
+/*Dark Mode*/
 #darkModeButton {
     display: flex;
     align-items: center;
@@ -58,7 +52,6 @@ th {
     transition: all 0.5s;
 }
 
-/* Swapped state */
 #darkModeButton.swapped {
     background-color: white;
     border: 1px solid black;
@@ -71,16 +64,118 @@ th {
     margin-left: 0;
 }
 
+.list-item {
+    height: 30px;
+    background-color: #55555500;
+    overflow: hidden;
+    transition: 2s;
+    display: flex;
+}
+
+.list-item:hover {
+    background-color: rgba(0, 255, 255, 0);
+    height: max-content;
+    transition: 2s ease-in;
+}
+
+
+/*Template Skeletons*/
+.article {
+    display: flex;
+
+}
+
+.left {
+    width: 30%;
+    position: sticky;
+    top: 10px;
+    height: max-content;
+}
+
+.right {
+    width: 68%;
+    margin-left: auto;
+}
+
+/*Toc Section*/
+#toc-section{
+    height: max-content; 
+    border: 2px solid #2e2e2e00; 
+    background-color: #f0f0f0; 
+    border-radius: 15px; 
+    padding: 15px; 
+    margin: 20px 0; 
+    border-left:solid 5px #6d8bf5
+}
+
+#toc-section h2{
+    font-size: 15px; 
+    margin-top: 0; 
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+/*Introduction Section*/
+#introduction-section h2{
+    font-size:30px; 
+    margin-top:20px; 
+    margin-bottom: 20px; 
+    line-height:1.5;
+}
+
+/*Key Takeaways Section*/
+#key-takeaways-section{
+    border: 2px solid #2e2e2e; 
+    padding: 15px; 
+    border-radius: 15px; 
+    margin: 20px 0;
+}
+
+#key-takeaways-section h2{
+    text-align:center; 
+    font-size:15px
+}
+
+#key-takeaways-section li{
+    list-style-type: none; 
+    padding-left: 25px; 
+    background-image: url(https://raw.githubusercontent.com/devyash292/Assets/refs/heads/main/BulletPoints/finger2.png); 
+    background-repeat: no-repeat; 
+    background-position: left top; 
+    background-size: 20px; 
+    margin-bottom: 10px;
+}
+
+/*Summary Section*/
+#summary-section {
+    background-color: #f0f0f0; 
+    border-radius:15px; 
+    padding: 20px; 
+    margin: 25px 0;
+}
+
+#summary-section h2 {
+    text-align:center; 
+    font-size:15px; 
+    margin-bottom: 0px;
+}
+
+/*Faq Section*/
+#faq-section h2{
+    font-size:30px; 
+    margin-top:20px; 
+    margin-bottom: 20px; 
+    line-height:1.5;
+}
+
 .faq-container {
     width: 100%;
     margin-top: 30px;
     border-top: 1px solid #f1f1f1;
-    /* Optional: Add a top border for the section */
 }
 
 .faq-item {
     margin-bottom: 0;
-    /* HR provides separation */
 }
 
 .faq-question {
@@ -95,7 +190,6 @@ th {
 
 .faq-question:hover {
     color: #000000;
-    /* Highlight on hover */
 }
 
 .faq-question strong {
@@ -114,7 +208,6 @@ th {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    /* Add padding to the answer text */
     font-size: 1em;
     color: #2e2e2e;
     line-height: 1.6;
@@ -122,17 +215,13 @@ th {
 
 .faq-item.active .faq-answer {
     max-height: 500px;
-    /* Adjust based on expected max answer height */
     padding-bottom: 15px;
-    /* Add padding below the answer when open */
 }
 
 .faq-item.active .faq-toggle {
     transform: rotate(180deg);
-    /* Rotate + to become X or just change text */
     content: '-';
     height: max-content;
-    /* This won't work directly, handled by JS */
 }
 
 .faq-separator {
@@ -140,39 +229,18 @@ th {
     height: 1px;
     background: #f1f1f1;
     margin: 0;
-    /* HR is part of the item separation */
 }
 
-.list-item {
-    height: 30px;
-    background-color: #55555500;
-    overflow: hidden;
-    transition: 2s;
-    display: flex;
+#related-resources-section h2{
+    font-size: 15px; 
+    margin-top: 0; 
+    margin-bottom: 20px; 
+    color: #2e2e2e; 
+    text-align: center;
 }
 
-.list-item:hover {
-    background-color: rgba(0, 255, 255, 0);
-    height: max-content;
-    transition: 2s ease-in;
-}
 
-.article {
-    display: flex;
 
-}
-
-.left {
-    width: 30%;
-    position: sticky;
-    top: 10px;
-    height: max-content;
-}
-
-.right {
-    width: 68%;
-    margin-left: auto;
-}
 
 @media (max-width: 800px) {
     .article {
