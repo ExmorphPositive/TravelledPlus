@@ -14,7 +14,7 @@ function toggleH2AndPColor() {
       }
 
       main h2 {
-        color: ${isDarkMode ? '#2e2e2e' : '#05bc30ff'} !important;
+        color: ${isDarkMode ? '#2e2e2e' : '#cccccc'} !important;
         transition: color 0.5s;
       }
 
@@ -68,24 +68,9 @@ function toggleH2AndPColor() {
         transition: color 0.5s;
       }
 
-      th {
-        background-color: ${isDarkMode ? '#f0f0f0' : '#181818'};
-        color: ${isDarkMode ? '#000000' : '#ffffff'};
-      }
-
-      td {
-        background-color: ${isDarkMode ? 'transparent' : '#000000'};
-        color: ${isDarkMode ? '#2e2e2e' : '#747474'};
-      }
-
       .faq-question,
       .faq-answer {
         color: ${isDarkMode ? '#2e2e2e' : '#747474'} !important;
-        transition: color 0.5s;
-      }
-
-      .faq-question:hover {
-        color: ${isDarkMode ? '#000000' : '#ffffff'} !important;
         transition: color 0.5s;
       }
     `;
