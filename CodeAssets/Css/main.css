@@ -1,0 +1,191 @@
+main {
+    min-height: 300px;
+    background-color: white;
+    transition: background-color 0.5s;
+}
+
+main h1 {
+    color: #2e2e2e;
+    transition: color 0.5s;
+}
+
+main h2 {
+    color: #2e2e2e;
+    transition: color 0.5s;
+}
+
+main p {
+    color: #2e2e2e;
+    transition: color 0.5s;
+}
+
+
+.blog-post-details {
+    color: #2e2e2e;
+    transition: color 0.5s;
+}
+
+th {
+    padding: 10px;
+    border: 1px solid #d2d2d2;
+    background-color: #f0f0f0;
+    text-align: left;
+    color: black;
+}
+
+#darkModeButton {
+    display: flex;
+    align-items: center;
+    width: 130px;
+    background-color: black;
+    padding: 10px 12px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    user-select: none;
+}
+
+#darkModeButton p {
+    color: white;
+    margin-left: 10px;
+    margin-right: 0;
+    transition: all 0.5s;
+    font-size: 12px;
+}
+
+#darkModeButton img {
+    width: 25px;
+    transition: all 0.5s;
+}
+
+/* Swapped state */
+#darkModeButton.swapped {
+    background-color: white;
+    border: 1px solid black;
+    flex-direction: row-reverse;
+}
+
+#darkModeButton.swapped p {
+    color: black;
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.faq-container {
+    width: 100%;
+    margin-top: 30px;
+    border-top: 1px solid #f1f1f1;
+    /* Optional: Add a top border for the section */
+}
+
+.faq-item {
+    margin-bottom: 0;
+    /* HR provides separation */
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #2e2e2e;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: #000000;
+    /* Highlight on hover */
+}
+
+.faq-question strong {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.faq-toggle {
+    font-size: 1.5em;
+    line-height: 1;
+    transition: transform 0.3s ease;
+    height: max-content;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    /* Add padding to the answer text */
+    font-size: 1em;
+    color: #2e2e2e;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    /* Adjust based on expected max answer height */
+    padding-bottom: 15px;
+    /* Add padding below the answer when open */
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+    /* Rotate + to become X or just change text */
+    content: '-';
+    height: max-content;
+    /* This won't work directly, handled by JS */
+}
+
+.faq-separator {
+    border: 0;
+    height: 1px;
+    background: #f1f1f1;
+    margin: 0;
+    /* HR is part of the item separation */
+}
+
+.list-item {
+    height: 30px;
+    background-color: #55555500;
+    overflow: hidden;
+    transition: 2s;
+    display: flex;
+}
+
+.list-item:hover {
+    background-color: rgba(0, 255, 255, 0);
+    height: max-content;
+    transition: 2s ease-in;
+}
+
+.article {
+    display: flex;
+
+}
+
+.left {
+    width: 30%;
+    position: sticky;
+    top: 10px;
+    height: max-content;
+}
+
+.right {
+    width: 68%;
+    margin-left: auto;
+}
+
+@media (max-width: 800px) {
+    .article {
+        display: block;
+    }
+
+    .left {
+        width: 100%;
+        position: unset;
+    }
+
+    .right {
+        width: 100%;
+        margin-left: 0px;
+    }
+}
