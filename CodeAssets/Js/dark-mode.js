@@ -3,10 +3,9 @@ let isDarkMode = false;  // track state
 function toggleH2AndPColor() {
     const style = document.createElement('style');
     style.textContent = `
-
       main {
         background-color: ${isDarkMode ? '#ffffffff' : '#000000ff'} !important;
-        transition: color 0.5s;
+        transition: background-color 0.5s;
       }
 
       main h1 {
@@ -31,7 +30,7 @@ function toggleH2AndPColor() {
 
       #toc-section {
         background-color: ${isDarkMode ? '#f0f0f0' : '#181818'} !important;
-        transition: color 0.5s;
+        transition: background-color 0.5s;
       }
 
       #toc-section a {
@@ -55,13 +54,13 @@ function toggleH2AndPColor() {
 
       #summary-section {
         background-color: ${isDarkMode ? '#f0f0f0' : '#181818'} !important;
-        transition: color 0.5s;
+        transition: background-color 0.5s;
       }
 
       .Extra001 {
         background-color: ${isDarkMode ? '#f0f0f0' : '#181818'} !important;
         color: ${isDarkMode ? '#2e2e2e' : '#6d8bf5'} !important;
-        transition: color 0.5s;
+        transition: color 0.5s, background-color 0.5s;
       }
 
       .Extra001 b {
@@ -70,30 +69,25 @@ function toggleH2AndPColor() {
       }
 
       th {
-        background-color: ${isDarkMode ? '#f0f0f0' : '#181818;'};
-        color: ${isDarkMode ? '#black' : '#white;'};
+        background-color: ${isDarkMode ? '#f0f0f0' : '#181818'};
+        color: ${isDarkMode ? '#000000' : '#ffffff'};
       }
 
       td {
-        background-color: ${isDarkMode ? '#transparent' : '#black;'};
-        color: ${isDarkMode ? '#2e2e2e' : '#747474;'};
+        background-color: ${isDarkMode ? 'transparent' : '#000000'};
+        color: ${isDarkMode ? '#2e2e2e' : '#747474'};
       }
 
-      .faq-question {
-        color: ${isDarkMode ? '#2e2e2e' : '#747474'} !important;
-        transition: color 0.5s;
-      }
-
-      .faq-question:hover {
-        color: ${isDarkMode ? '#black' : '#white'} !important;
-        transition: color 0.5s;
-      }
-
+      .faq-question,
       .faq-answer {
         color: ${isDarkMode ? '#2e2e2e' : '#747474'} !important;
         transition: color 0.5s;
       }
 
+      .faq-question:hover {
+        color: ${isDarkMode ? '#000000' : '#ffffff'} !important;
+        transition: color 0.5s;
+      }
     `;
 
     // Remove old injected style if any
@@ -108,8 +102,22 @@ function toggleH2AndPColor() {
 
     // Flip state
     isDarkMode = !isDarkMode;
+
+    // Update button text and class
+    const button = document.getElementById('darkModeButton');
+    const text = button.querySelector('p');
+    if (isDarkMode) {
+        text.textContent = 'Light Mode';
+        button.classList.add('swapped');
+    } else {
+        text.textContent = 'Dark Mode';
+        button.classList.remove('swapped');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('darkModeButton').addEventListener('click', toggleH2AndPColor);
+    const button = document.getElementById('darkModeButton');
+    if (button) {
+        button.addEventListener('click', toggleH2AndPColor);
+    }
 });
