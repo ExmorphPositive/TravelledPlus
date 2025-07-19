@@ -64,20 +64,6 @@ main p {
     margin-left: 0;
 }
 
-.list-item {
-    height: 30px;
-    background-color: #55555500;
-    overflow: hidden;
-    transition: 2s;
-    display: flex;
-}
-
-.list-item:hover {
-    background-color: rgba(0, 255, 255, 0);
-    height: max-content;
-    transition: 2s ease-in;
-}
-
 
 /*Template Skeletons*/
 .article {
@@ -113,6 +99,45 @@ main p {
     margin-top: 0; 
     margin-bottom: 20px; 
     text-align: center;
+}
+
+#toc-section ol {
+    list-style: none; 
+    padding-left: 0;
+}
+
+#toc-section li {
+    height: 30px;
+}
+
+#toc-section a {
+    text-decoration: none; 
+    font-weight: 500; 
+    height: 30px; 
+    align-content: center; 
+    display: block;
+}
+
+.list-item {
+    height: 30px;
+    background-color: #55555500;
+    overflow: hidden;
+    transition: 2s;
+    display: flex;
+}
+
+.list-item:hover {
+    background-color: rgba(0, 255, 255, 0);
+    height: max-content;
+    transition: 2s ease-in;
+}
+
+
+.list-item-right {
+    margin-left: auto; 
+    height: 30px;
+    padding-right: 20px; 
+    align-content: center;
 }
 
 /*Introduction Section*/
