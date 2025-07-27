@@ -43,7 +43,7 @@ function toggleH2AndPColor() {
         transition: color 0.5s;
       }
 
-      #list-main-heading li {
+      .list-main-heading li {
         background-image: url('${isDarkMode
             ? 'https://raw.githubusercontent.com/ExmorphPositive/CenterAssets-Pu/refs/heads/main/Images/BulletPoints/loading.png'
             : 'https://raw.githubusercontent.com/ExmorphPositive/CenterAssets-Pu/refs/heads/main/Images/BulletPoints/loading-inv.png'}') !important;
