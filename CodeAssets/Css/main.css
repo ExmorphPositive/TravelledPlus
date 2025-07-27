@@ -84,113 +84,120 @@ main p {
 }
 
 /*Toc Section*/
-#toc-section{
-    height: max-content; 
-    border: 2px solid #2e2e2e00; 
-    background-color: #f0f0f0; 
-    border-radius: 15px; 
-    padding: 15px; 
-    margin: 20px 0; 
-    border-left:solid 5px #6d8bf5
+#toc-section {
+    height: max-content;
+    border: 2px solid #2e2e2e00;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px 0;
+    border-left: solid 5px #6d8bf5
 }
 
-#toc-section h2{
-    font-size: 15px; 
-    margin-top: 0; 
-    margin-bottom: 20px; 
+#toc-section h2 {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 #toc-section ol {
-    list-style: none; 
+    list-style: none;
     padding-left: 0;
 }
 
-#toc-section li {
-    height: 30px;
-}
-
-#toc-section a {
-    text-decoration: none; 
-    font-weight: 500; 
-    height: 30px; 
-    align-content: center; 
-    display: block;
-}
-
-.list-item {
-    height: 30px;
-    background-color: #55555500;
-    overflow: hidden;
-    transition: 2s;
+.list-main-heading {
     display: flex;
+    align-items: center;
+    width: 100%;
 }
 
-.list-item:hover {
-    background-color: rgba(0, 255, 255, 0);
-    height: max-content;
-    transition: 2s ease-in;
+.list-main-heading img {
+    height: 17px;
+    margin-left: auto;
+    margin-right: 20px;
 }
 
+.list-main-heading li {
+    list-style-type: none;
+    padding-left: 25px;
+    background-image: url(https://cdn-icons-png.flaticon.com/128/17879/17879269.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 12px;
+    margin-bottom: 10px;
+}
 
-.list-item-right {
-    margin-left: auto; 
-    height: 30px;
-    padding-right: 20px; 
-    align-content: center;
+.list-main-heading a {
+    color: #2e2e2e;
+    text-decoration: none;
+}
+
+.list-sub-heading {
+    padding-left: 40px;
+    transition: all 0.3s ease;
+}
+
+.list-sub-heading li {
+    margin-bottom: 5px;
+}
+
+.list-sub-heading a {
+    text-decoration: none;
+    color: #2e2e2e;
 }
 
 /*Introduction Section*/
-#introduction-section h2{
-    font-size:30px; 
-    margin-top:20px; 
-    margin-bottom: 20px; 
-    line-height:1.5;
+#introduction-section h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 /*Key Takeaways Section*/
-#key-takeaways-section{
-    border: 2px solid #2e2e2e; 
-    padding: 15px; 
-    border-radius: 15px; 
+#key-takeaways-section {
+    border: 2px solid #2e2e2e;
+    padding: 15px;
+    border-radius: 15px;
     margin: 20px 0;
 }
 
-#key-takeaways-section h2{
-    text-align:center; 
-    font-size:15px
+#key-takeaways-section h2 {
+    text-align: center;
+    font-size: 15px
 }
 
-#key-takeaways-section li{
-    list-style-type: none; 
-    padding-left: 25px; 
-    background-image: url(https://raw.githubusercontent.com/devyash292/Assets/refs/heads/main/BulletPoints/finger2.png); 
-    background-repeat: no-repeat; 
-    background-position: left top; 
-    background-size: 20px; 
+#key-takeaways-section li {
+    list-style-type: none;
+    padding-left: 25px;
+    background-image: url(https://raw.githubusercontent.com/devyash292/Assets/refs/heads/main/BulletPoints/finger2.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 20px;
     margin-bottom: 10px;
 }
 
 /*Summary Section*/
 #summary-section {
-    background-color: #f0f0f0; 
-    border-radius:15px; 
-    padding: 20px; 
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
     margin: 25px 0;
 }
 
 #summary-section h2 {
-    text-align:center; 
-    font-size:15px; 
+    text-align: center;
+    font-size: 15px;
     margin-bottom: 0px;
 }
 
 /*Faq Section*/
-#faq-section h2{
-    font-size:30px; 
-    margin-top:20px; 
-    margin-bottom: 20px; 
-    line-height:1.5;
+#faq-section h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .faq-container {
@@ -256,14 +263,54 @@ main p {
     margin: 0;
 }
 
-#related-resources-section h2{
-    font-size: 15px; 
-    margin-top: 0; 
-    margin-bottom: 20px; 
-    color: #2e2e2e; 
+/*Related Resources*/
+#related-resources-section h2 {
+    font-size: 15px;
+    margin-top: 20;
+    margin-bottom: 20px;
+    color: #2e2e2e;
     text-align: center;
 }
 
+.related-res-card {
+    margin-bottom: 15px;
+    background-color: #e6e6e6;
+    border-bottom: 17px solid #2e2e2e;
+}
+
+.related-res-subcard2 {
+    padding: 15px;
+}
+
+.related-res-link {
+    color: #2e2e2e;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    padding-right: 10px
+}
+
+.related-res-subcard2 p {
+    padding-right: 10px;
+    margin-top: 5px
+}
+
+.related-res-more {
+    text-decoration: none;
+    color: #6d8bf5;
+}
+
+
+/*Extras Sections*/
+.Extra001 {
+    border-left: 5px solid #6d8bf5;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    background-color: #f0f0f0;
+    color: #2e2e2e;
+    transition: color 0.5s, background-color 0.5s;
+}
 
 
 

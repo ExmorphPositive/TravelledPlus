@@ -73,6 +73,16 @@ function toggleH2AndPColor() {
         color: ${isDarkMode ? '#2e2e2e' : '#747474'} !important;
         transition: color 0.5s;
       }
+
+      .related-res-card {
+        background-color: ${isDarkMode ? '#e6e6e6' : '#181818'} !important;
+        transition: color 0.5s;
+      }
+
+      .related-res-link {
+        color: ${isDarkMode ? '#2e2e2e' : '#747474'} !important;
+        transition: color 0.5s;
+      }
     `;
 
     // Remove old injected style if any
