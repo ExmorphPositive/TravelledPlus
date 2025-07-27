@@ -28,6 +28,11 @@ function toggleH2AndPColor() {
         transition: color 0.5s;
       }
 
+      #darkModeButton p {
+        color: ${isDarkMode ? '#747474' : '#2e2e2e'} !important;
+        transition: color 0.5s;
+      }
+
       #toc-section {
         background-color: ${isDarkMode ? '#f0f0f0' : '#181818'} !important;
         transition: background-color 0.5s;
@@ -36,6 +41,12 @@ function toggleH2AndPColor() {
       #toc-section a {
         color: ${isDarkMode ? '#2e2e2e' : '#747474'} !important;
         transition: color 0.5s;
+      }
+
+      #list-main-heading li {
+        background-image: url('${isDarkMode
+            ? 'https://raw.githubusercontent.com/ExmorphPositive/CenterAssets-Pu/refs/heads/main/Images/BulletPoints/loading.png'
+            : 'https://raw.githubusercontent.com/ExmorphPositive/CenterAssets-Pu/refs/heads/main/Images/BulletPoints/loading-inv.png'}') !important;
       }
 
       #key-takeaways-section li {
