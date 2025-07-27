@@ -1,9 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Truncate anchor text to 30 chars
+    // Truncate main heading anchor text to 30 chars
     document.querySelectorAll('.list-main-heading a span').forEach((span) => {
         const fullText = span.textContent.trim();
         if (fullText.length > 30) {
             span.textContent = fullText.substring(0, 30) + '...';
+        }
+    });
+
+    // Truncate sub-heading anchor text to 20 chars
+    document.querySelectorAll('.list-sub-heading a span').forEach((span) => {
+        const fullText = span.textContent.trim();
+        if (fullText.length > 20) {
+            span.textContent = fullText.substring(0, 20) + '...';
         }
     });
 
